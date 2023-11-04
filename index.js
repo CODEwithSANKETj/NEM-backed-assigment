@@ -20,7 +20,7 @@ let options = {
         },
         servers: [
             {
-                url: ""
+                url: "https://backed-service-assigment.onrender.com/"
             }
         ]
     },
@@ -29,15 +29,15 @@ let options = {
 
 
 const swaggerSpec = swaggerJSDoc(options)
-app.use('/api_docs',swaggerUi.serve,swaggerUi.setup(swaggerSpec))
+app.use('/',swaggerUi.serve,swaggerUi.setup(swaggerSpec))
 //////////////////////
 
 
 
 
-app.get('/',(req,res)=>{
-    res.send('hiii')
-})
+// app.get('/',(req,res)=>{
+//     res.send('hiii')
+// })
 
 app.listen(4040,()=>{
     console.log(process.version);
