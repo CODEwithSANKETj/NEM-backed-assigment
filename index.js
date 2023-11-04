@@ -32,13 +32,6 @@ const swaggerSpec = swaggerJSDoc(options)
 app.use('/',swaggerUi.serve,swaggerUi.setup(swaggerSpec))
 //////////////////////
 
-
-
-
-// app.get('/',(req,res)=>{
-//     res.send('hiii')
-// })
-
 app.listen(4040,()=>{
     console.log(process.version);
     console.log('running on 4040');
