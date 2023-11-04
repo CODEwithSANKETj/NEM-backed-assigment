@@ -20,7 +20,7 @@ let options = {
         },
         servers: [
             {
-                url: "http://localhost:4040"
+                url: ""
             }
         ]
     },
@@ -40,5 +40,6 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(4040,()=>{
+    console.log(process.version);
     console.log('running on 4040');
 })
